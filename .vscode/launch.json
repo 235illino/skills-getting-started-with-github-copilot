@@ -8,12 +8,13 @@
       "name": "Launch Mergington WebApp",
       "type": "debugpy",
       "request": "launch",
+      "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
       "module": "uvicorn",
       "args": [
         "src.app:app",
         "--reload",
-        "--reload-include",
-        "src/static/*"
+        "--reload-dir",
+        "src"
       ],
       "jinja": true
     }
